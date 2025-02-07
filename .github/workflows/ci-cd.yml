@@ -26,6 +26,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # Step 4: Build the Docker image
+      - name: Verify the current working directory
+        run: pwd
+        
       - name: Build Docker image
         run: |
           docker build -t dhruvharsora/my-html-css-app:latest .
